@@ -246,3 +246,9 @@ body {
     flex-direction: column-reverse;
   }
 }
+
+/* Hide tldraw watermark and license warning overlays */
+.tl-watermark,
+.tl-watermark_link {
+  display: none !important;
+}
