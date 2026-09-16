@@ -19,7 +19,10 @@ const TldrawCanvas = dynamic(
     }) {
       return (
         <div className="w-full h-full relative">
-          <Tldraw onMount={onMount} />
+          <Tldraw
+            licenseKey={process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY}
+            onMount={onMount}
+          />
         </div>
       );
     };
@@ -36,20 +39,6 @@ export default function WorkspacePage() {
   useEffect(() => {
     setIsMounted(true);
 
-    // Silence tldraw production license warning messages in browser console
-    const originalError = console.error;
-    console.error = (...args: any[]) => {
-      if (
-        typeof args[0] === "string" &&
-        (args[0].includes("tldraw license") ||
-          args[0].includes("license key") ||
-          args[0].includes("License key"))
-      ) {
-        return;
-      }
-      originalError.apply(console, args);
-    };
-
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js").catch(() => undefined);
     }
@@ -64,7 +53,6 @@ export default function WorkspacePage() {
     window.addEventListener("appinstalled", handleAppInstalled);
 
     return () => {
-      console.error = originalError;
       window.removeEventListener(
         "beforeinstallprompt",
         handleBeforeInstallPrompt,
