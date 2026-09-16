@@ -20,7 +20,10 @@ const TldrawCanvas = dynamic(
       return (
         <div className="w-full h-full relative">
           <Tldraw
-            licenseKey={process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY}
+            licenseKey={
+              process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY ||
+              "tldraw-2026-09-30/WyIwVjFEaVhvZSIsWyIqIl0sMTYsIjIwMjYtMDktMzAiXQ.hEWjhwcegQF3wCI8sjOxKhejM+JEzHWmIl2EnBXfzCTRKrCngRjSXUy64JT1qwRhTMQqVXHvKMMjFJgL1BXIeQ"
+            }
             onMount={onMount}
           />
         </div>
