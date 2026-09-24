@@ -22,7 +22,7 @@ const TldrawCanvas = dynamic(
           <Tldraw
             licenseKey={
               process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY ||
-              "tldraw-2026-12-25/WyJiQnZ4dEE3QiIsWyIqIl0sMTYsIjIwMjYtMTItMjUiXQ.KmcHnbxAEwHlyiM7tQBM7N2TxdFHcopiFmQfR3LITU3vXpIcJiEqqX7DZfoJcI0XR9aRqZAQ3655kcuzyV2knA"
+              "tldraw-sarthak-panigrahi-2027-09-23/WyJYQ1dsTlVDbSIsWyIqLnNhcnRoYWstd2hpdGVib2FyZC52ZXJjZWwuYXBwIl0sOSwiMjAyNy0wOS0yMyJd.zlx44wmcOzTYiGHY7CjvAplj4VpwOZxTxyYWwtzYcMABXA7DimGiwbs4bEB6XSWo4FHSNYrPhE6w3pFePegBIg"
             }
             onMount={onMount}
           />
