@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import InstallPrompt from "./components/InstallPrompt";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -62,6 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
+        <InstallPrompt />
       </body>
     </html>
   );

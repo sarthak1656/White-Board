@@ -6,7 +6,7 @@ import "@excalidraw/excalidraw/index.css";
 
 export default function ExcalidrawWrapper() {
   return (
-    <div style={{ height: "100vh", width: "100vw" }}>
+    <div style={{ height: "100%", width: "100%" }}>
       <Excalidraw />
     </div>
   );
